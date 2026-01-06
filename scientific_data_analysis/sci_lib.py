@@ -662,7 +662,7 @@ def update_custom_rcparams(
     # If the fonsize is None, it is set to a common default value.
     if fontsize is None:
         if designated_use == "article":
-            fontsize = 11
+            fontsize = 12
         elif designated_use == "powerpoint":
             fontsize = 7
 
@@ -1113,7 +1113,7 @@ def add_label_to_legend(
     # Set up the variable string, if values are passed for the variable. Else create an
     # empty string for it.
     if variable_value is not None and variable_err is not None:
-        variable_value_and_err_with_plus_minus_sign = "{:.{}f} \u00B1 {:.{}f}".format(
+        variable_value_and_err_with_plus_minus_sign = "{:.{}f} \u00b1 {:.{}f}".format(
             variable_value / 10**magnitude,
             precision,
             variable_err / 10**magnitude,
