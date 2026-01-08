@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as file:
 
 setup(
     name="scientific_data_analysis",
-    version="2.0.4",
+    version="2.0.5",
     author="Michael Weide",
     author_email="michael.weide08@gmail.com",
     description="Library of some functions I find useful for data analysis.",

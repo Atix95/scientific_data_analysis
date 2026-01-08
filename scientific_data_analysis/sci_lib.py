@@ -625,6 +625,7 @@ def update_custom_rcparams(
     designated_use: Optional[str] = "article",
     fontsize: Optional[float] = None,
     palette_name: str = "default",
+    comma_separation: bool = False,
 ) -> None:
     """
     Update RC parameters so that the figures blend in nicely in the document.
@@ -647,6 +648,10 @@ def update_custom_rcparams(
         Name of the color palette that is to be used. Default is 'default'. Look into
         the function set_color_palette() for further information.
 
+    comma_separation : boolean, optional
+        If True, the decimal delimiter is comma instead of dot without an extra space
+        after the comma. Default is False.
+
     """
     # If fontsize or designated_use have an invalid value, an error is raised.
     if fontsize is not None and (fontsize < 0 or np.isnan(fontsize)):
@@ -665,6 +670,11 @@ def update_custom_rcparams(
             fontsize = 12
         elif designated_use == "powerpoint":
             fontsize = 7
+
+    if comma_separation:
+        locale.setlocale(locale.LC_NUMERIC, "de_DE")
+    else:
+        locale.setlocale(locale.LC_NUMERIC, "en_US")
 
     set_color_palette(palette_name)
     # Dictionary containing the rc parameters that are to be updated.
