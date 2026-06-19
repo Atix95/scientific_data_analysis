@@ -693,6 +693,7 @@ def update_custom_rcparams(
                 r"\usepackage[utf8]{inputenc}",
                 r"\usepackage[T1]{fontenc}",
                 r"\usepackage{textcomp}",
+                r"\usepackage{nicefrac}",
                 r"\usepackage{amsmath}",
                 r"\usepackage{amssymb}",
                 r"\usepackage{siunitx}",

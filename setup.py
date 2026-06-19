@@ -1,12 +1,11 @@
 from setuptools import setup
 
-
 with open("README.md", "r", encoding="utf-8") as file:
     long_description = file.read()
 
 setup(
     name="scientific_data_analysis",
-    version="2.0.5",
+    version="2.0.6",
     author="Michael Weide",
     author_email="michael.weide08@gmail.com",
     description="Library of some functions I find useful for data analysis.",
